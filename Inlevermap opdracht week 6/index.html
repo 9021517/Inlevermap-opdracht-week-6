@@ -4,26 +4,71 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-     <h1>Beleggingen</h1>
-     <p>Beschikbaar saldo: €760.00</p>
-     <p>Kies een categorie:</p>
-<select>
-  <option>Aandelen</option>
-  </select>
-   <p>Kies een product:</p>
-<select>
-  <option>TechCorp</option>
-</select>
-   <p>Huidige prijs: €120.00</p>
-    <p>In bezit: 2 eenheden</p>
-   <p>Bedrag:</p>
-   <input type="text" value="240">
-   <button>Kopen</button>
-   <button>Verkopen</button>
-  <p style="color:red;">Je hebt €240.00 geïnvesteerd in TechCorp.</p>
+  <div class="container">
 
+    <h1>Beleggingen</h1>
+
+    <p>Beschikbaar saldo: <strong>€760.00</strong></p>
+
+    <form id="investmentForm">
+
+      <div class="form-group">
+
+        <label for="category">Kies een categorie:</label>
+
+        <select id="category" name="category">
+
+          <option value="aandelen">Aandelen</option>
+
+          <option value="crypto">Crypto</option>
+
+        </select>
+
+      </div>
+
+      <div class="form-group">
+
+        <label for="product">Kies een product:</label>
+
+        <select id="product" name="product">
+
+          <option value="TechCorp">TechCorp</option>
+
+          <option value="GreenEnergy">GreenEnergy</option>
+
+        </select>
+
+      </div>
+
+      <p>Huidige prijs: <strong>€120.00</strong></p>
+
+      <p>In bezit: <strong>2 eenheden</strong></p>
+
+      <div class="form-group">
+
+        <label for="amount">Bedrag:</label>
+
+        <input type="number" id="amount" name="amount" value="240">
+
+      </div>
+
+      <div class="buttons">
+
+        <button type="button" onclick="buy()">Kopen</button>
+
+        <button type="button" onclick="sell()">Verkopen</button>
+
+      </div>
+
+    </form>
+
+    <p id="result" class="result">Je hebt €240.00 geïnvesteerd in TechCorp.</p>
+
+  </div>
+  
 <script src="java.js"></script>
 
 
